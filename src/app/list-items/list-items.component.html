@@ -1,0 +1,10 @@
+<section>
+  <ul *ngIf="listItems.length > 0; else noItemsPlaceholder">
+    <app-item-list *ngFor="let item of listItems" [todo]="item"></app-item-list>
+  </ul>
+  <ng-template #noItemsPlaceholder>
+    <p >
+      Nessun oggetto in lista
+    </p></ng-template
+  >
+</section>

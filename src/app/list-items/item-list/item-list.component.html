@@ -1,0 +1,17 @@
+<li>
+  <label class="container">
+    <input
+      #checkbox
+      type="checkbox"
+      [checked]="todo.isChecked"
+      (change)="checkboxStatusChanged()"
+    />
+    <div #textTodo class="textTodo">{{ todo.text }}</div>
+    <div class="controls">
+      <div class="button-group">
+        <button class="delButton" (click)="deleteTodo()"></button>
+        <button class="editButton" (click)="editTodo()"></button>
+      </div>
+    </div>
+  </label>
+</li>

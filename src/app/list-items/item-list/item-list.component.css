@@ -1,0 +1,114 @@
+li {
+  list-style: none;
+  min-height: 5rem;
+  border-radius: 15px;
+  background-color: #ffd95a;
+  transition: all ease-in 0.1s;
+  margin-bottom: 5px;
+}
+
+li:hover {
+  transform: scale(1.1);
+  box-shadow: 5px 5px 15px #4c3d3dc8;
+  z-index: 1;
+  border-left: 7px solid #4c3d3d;
+}
+
+.container {
+  font-size: 1.3rem;
+  min-height: 5rem;
+  display: flex;
+  align-items: center;
+}
+
+.textTodo {
+  padding: 5px 0;
+  word-break: break-all;
+  color: #4c3d3d;
+}
+
+.controls {
+  margin-left: auto;
+  min-height: 5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container input {
+  height: 1.3rem;
+}
+
+.container input,
+.controls {
+  flex-shrink: 0;
+  flex-basis: 20%;
+}
+
+input:checked + .textTodo {
+  text-decoration: line-through 2px;
+}
+
+.button-group {
+  background-color: #c07f00;
+  width: 2rem;
+  height: 2rem;
+
+  background-image: url("../../../assets/three-line-horizontal.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1.5rem;
+  border-radius: 5px;
+
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+  grid-template-areas:
+    "del del"
+    "edit edit";
+
+  transition: all ease-out 0.1s 0.3s;
+}
+
+.button-group button {
+  border: none;
+  border-radius:3px;
+  opacity: 0;
+  transition: opacity ease-out 0.1s 0.1s, transform ease-out 0.1s 0.05s;
+}
+
+.button-group:hover {
+  z-index: 2;
+  transform: scale(3.5);
+  background-size: 0%;
+  background-color: #c07f00cb;
+  transition: all ease-out 0.1s 0.3s;
+  box-shadow: 1px 1px 3px #4c3d3dc8;
+}
+
+.button-group:hover button {
+  opacity: 1;
+  transform: scale(0.7);
+  transition: opacity ease-out 0.1s 0.5s, transform ease-out 0.1s 0.5s;
+}
+
+.delButton,
+.editButton {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 0.5rem;
+  background-color: #4c3d3d;
+}
+
+.delButton {
+  background-image: url("../../../assets/trash-bin.svg");
+
+  grid-area: del;
+}
+
+.editButton {
+  background-image: url("../../../assets/pencil.svg");
+
+  grid-area: edit;
+}

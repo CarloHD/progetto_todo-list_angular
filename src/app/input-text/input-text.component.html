@@ -1,0 +1,4 @@
+<header>
+  <input type="text" [(ngModel)]="textValue" />
+  <button [ngClass]="{isShowed: textValue.trim().length > 0}" (click)="addTodo()">Inserisci</button>
+</header>

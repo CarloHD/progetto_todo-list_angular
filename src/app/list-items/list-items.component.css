@@ -1,0 +1,13 @@
+ul {
+  padding: 30px 5px;
+  margin: 0;
+  background-color: #fff7d4;
+  border-radius: 0 0 40px 40px;
+}
+
+p {
+  text-align: center;
+  padding: 30px 0;
+  color: #4c3d3d;
+  font-size: 1.2rem;
+}
